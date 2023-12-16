@@ -112,7 +112,7 @@ SLIP*****\n\n");
 }
 //*****************TeamLead.java*****************
 import java.util.Scanner ;
-public class Programmer extends Employee {
+public class TeamLead extends Employee {
  double bp,da,hra,pf,club,net,gross,deduct ;
  public Programmer () {
  this.bp = 0 ;
