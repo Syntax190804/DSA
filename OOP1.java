@@ -43,7 +43,7 @@ class Complex_Op
  System.out.println("Division is :("+real+") + ("+imag+")i");
  }
 }
-/****************************************************2.Complex.java********
+//********************************2.Complex.java********
 
 import java.util.Scanner ;
 public class Complex
@@ -65,9 +65,7 @@ public class Complex
  Complex_Op Object2 = new Complex_Op(num1 , num2);
  do
  {
- System.out.print("\nMenu:
-\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\nEnter Your Choice
-= ") ;
+ System.out.print("\nMenu:\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\nEnter Your Choice = ") ;
  m = input.nextInt() ;
  switch(m)
  {
@@ -84,4 +82,4 @@ break ;
  n = input.next().charAt(0) ;
  } while (n == 'y') ;
  }
-} */
+} 
