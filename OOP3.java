@@ -10,7 +10,8 @@ gross and net salary.
  1) To Study Inheritance and its types
  2) To implement inheritance using OOP language*/
 //*********************Employee.java******************
-import java.util.Scanner ;
+
+ import java.util.Scanner ;
 public class Employee {
  int empid ;
  String name ;
@@ -54,11 +55,12 @@ address ,String email ) {
  System.out.println("Email id : " +email);
  System.out.println("Address : " +address);
  } }
+
 //****************Programmer.java*****************
 import java.util.Scanner ;
 public class Programmer extends Employee {
  double bp,da,hra,pf,club,net,gross,deduct ;
- public Programmer () {
+ public Programmer() {
  this.bp = 0 ;
  this.da = 0 ;
  this.hra = 0 ;
@@ -68,8 +70,7 @@ public class Programmer extends Employee {
  this.gross = 0 ;
  this.deduct = 0;
  }
- public Programmer(double bp,double da,double hra,double
-pf,double club,double net,double gross,double deduct ) {
+ public Programmer(double bp,double da,double hra,double pf,double club,double net,double gross,double deduct ) {
  this.bp = bp;
  this.da = da ;
  this.hra = hra ;
@@ -97,8 +98,7 @@ pf,double club,double net,double gross,double deduct ) {
  }
  public void displaySalslip()
  {
- System.out.println("\n\n*****PROGRAMMER SALARY
-SLIP*****\n\n");
+ System.out.println("\n\n*****PROGRAMMER SALARY SLIP*****\n\n");
  this.display() ;
  System.out.println("Basic Pay : " +this.bp);
  System.out.println("DA : " +this.da);
@@ -110,11 +110,12 @@ SLIP*****\n\n");
  System.out.println("\n Net Salary : " +this.net);
  }
 }
+
 //*****************TeamLead.java*****************
 import java.util.Scanner ;
 public class TeamLead extends Employee {
  double bp,da,hra,pf,club,net,gross,deduct ;
- public Programmer () {
+ public TeamLead() {
  this.bp = 0 ;
  this.da = 0 ;
  this.hra = 0 ;
@@ -124,8 +125,7 @@ public class TeamLead extends Employee {
  this.gross = 0 ;
  this.deduct = 0;
  }
- public Programmer(double bp,double da,double hra,double
-pf,double club,double net,double gross,double deduct ){
+ public TeamLead(double bp,double da,double hra,double pf,double club,double net,double gross,double deduct ){
  this.bp = bp;
  this.da = da ;
  this.hra = hra ;
@@ -141,8 +141,8 @@ pf,double club,double net,double gross,double deduct ){
  bp = sc.nextDouble() ;
  return bp ;
  }
- public void calculateSal(Programmer p) {
- double bp = p.getBasicPay () ;
+ public void calculateSal(TeamLead t) {
+ double bp = t.getBasicPay() ;
  da = 0.97 * bp ;
  hra = 0.10 * bp ;
  pf = 0.12 * bp ;
@@ -153,8 +153,7 @@ pf,double club,double net,double gross,double deduct ){
  }
  public void displaySalslip()
  {
- System.out.println("\n\n*****PROGRAMMER SALARY
-SLIP*****\n\n");
+ System.out.println("\n\n*****TEAMLEAD SALARY SLIP*****\n\n");
  this.display() ;
  System.out.println("Basic Pay : " +this.bp);
  System.out.println("DA : " +this.da);
@@ -165,6 +164,7 @@ SLIP*****\n\n");
  System.out.println("\n Deduction in Salary: " +this.deduct);
  System.out.println("\n Net Salary : " +this.net);
  } }
+
 //************AssistantProjectManager.java************
 import java.util.Scanner;
 public class AssistantProjectManager extends Employee {
@@ -179,9 +179,7 @@ public class AssistantProjectManager extends Employee {
  this.gross = 0 ;
  this.deduct = 0;
  }
- public AssistantProjectManager(double bp,double da,double
-hra,double pf,double club,double net,double gross,double
-deduct) {
+ public AssistantProjectManager(double bp,double da,double hra,double pf,double club,double net,double gross,double deduct) {
  this.bp = bp;
  this.da = da ;
  this.hra = hra ;
@@ -193,8 +191,7 @@ deduct) {
  }
  public double getBasicPay() {
  Scanner sc =new Scanner (System.in) ;
- System.out.println("Enter basic pay for
-AssistantProjectManager : ");
+ System.out.println("Enter basic pay for AssistantProjectManager : ");
  bp = sc.nextDouble() ;
  return bp ;
  }
@@ -210,8 +207,7 @@ AssistantProjectManager : ");
  }
  public void displaySalslip()
  {
- System.out.println("\n\n*****ASSISTANT PROJRECT
-MANAGER SALARY SLIP*****\n\n");
+ System.out.println("\n\n*****ASSISTANT PROJRECT MANAGER SALARY SLIP*****\n\n");
  this.display() ;
  System.out.println("Basic Pay : " +this.bp);
  System.out.println("DA : " +this.da);
@@ -223,6 +219,7 @@ MANAGER SALARY SLIP*****\n\n");
  System.out.println("\n Net Salary : " +this.net);
  }
 }
+
 //************ProjectManager.java*****************
 import java.util.Scanner ;
 public class ProjectManager extends Employee {
@@ -237,8 +234,7 @@ public class ProjectManager extends Employee {
  this.gross = 0 ;
  this.deduct = 0;
  }
- public ProjectManager(double bp,double da,double hra,double
-pf,double club,double net,double gross,double deduct ) {
+ public ProjectManager(double bp,double da,double hra,double pf,double club,double net,double gross,double deduct ) {
  this.bp = bp;
  this.da = da ;
  this.hra = hra ;
@@ -266,8 +262,7 @@ pf,double club,double net,double gross,double deduct ) {
  }
  public void displaySalslip()
  {
- System.out.println("\n\n*****PROJECT MANAGER SALARY
-SLIP*****\n\n");
+ System.out.println("\n\n*****PROJECT MANAGER SALARY SLIP*****\n\n");
  this.display() ;
  System.out.println("Basic Pay : " +this.bp);
  System.out.println("DA : " +this.da);
@@ -279,6 +274,7 @@ SLIP*****\n\n");
  System.out.println("\n Net Salary : " +this.net);
  }
 }
+
 //*****************Salary.java*****************
 import java.util.Scanner;
 public class Salary {
@@ -288,9 +284,7 @@ public class Salary {
  Scanner input = new Scanner(System.in);
  do
  {
- System.out.println("\n1.Programmer \n2.TeamLead
-\n3.AssistantProjectManager \n4.ProjectManager
-\nEnter_Your_Choice" );
+ System.out.println("\n1.Programmer \n2.TeamLead \n3.AssistantProjectManager \n4.ProjectManager \nEnter_Your_Choice" );
  m = input.nextInt();
  switch(m)
  {
@@ -307,15 +301,13 @@ public class Salary {
  team.displaySalslip() ;
  break ;
  case 3 :
- AssistantProjectManager apm = new
-AssistantProjectManager() ;
+ AssistantProjectManager apm = new AssistantProjectManager() ;
  apm.input() ;
  apm.calculateSal(apm) ;
  apm.displaySalslip() ;
  break ;
  case 4 :
- ProjectManager pm = new
-ProjectManager() ;
+ ProjectManager pm = new ProjectManager() ;
  pm.input() ;
  pm.calculateSal(pm) ;
  pm.displaySalslip() ;
